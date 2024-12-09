@@ -10,6 +10,8 @@ const buttonOnOffElm = document.querySelector("button")
 console.log(buttonOnOffElm)
 const lampadina = document.getElementById("lampadina")
 console.log(lampadina)
+const title = document.querySelector("h1")
+console.log(title)
 
 let acceso = false;
 
@@ -18,11 +20,17 @@ buttonOnOffElm.addEventListener("click", function () {
         lampadina.src = `./img/yellow_lamp.png`
         acceso = true;
         buttonOnOffElm.innerHTML = `Spegni`
+        buttonOnOffElm.style.background = "green";
+        title.innerHTML = "Buona notte";
+        
+
     }
     else {
         acceso = false;
         lampadina.src = `./img/white_lamp.png`
         buttonOnOffElm.innerHTML = `Accendi`
+        buttonOnOffElm.style.background = "red";
+        title.innerHTML = "Buongiorno";
     }
 } )
 
